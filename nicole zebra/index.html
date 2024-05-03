@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Management System</title>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
+  <!-- Your Firebase config -->
+  <script>
+    var firebaseConfig = {
+       apiKey: "AIzaSyDIrmutNB8-NvwcTKN6-yDBPGy8rcyC96I",
+            authDomain: "notes-management-system-71bcc.firebaseapp.com",
+            projectId: "notes-management-system-71bcc",
+            storageBucket: "notes-management-system-71bcc.appspot.com",
+            messagingSenderId: "1001388345765",
+            appId: "1:1001388345765:web:666c8ffb7361fe7d6f804c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#surveys">Surveys</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <div id="main-content">
+    <!-- Home page -->
+    <section id="home">
+      <h2>Welcome to our Survey Management System</h2>
+      <p>Sign in to create and respond to surveys.</p>
+    </section>
+
+    <!-- Surveys page -->
+    <section id="surveys">
+      <h2>Surveys</h2>
+      <div id="survey-list">
+        <!-- Surveys will be displayed here dynamically -->
+      </div>
+    </section>
+
+    <!-- Login page -->
+    <section id="login">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- Survey creation page (visible to admin) -->
+    <section id="create-survey">
+      <h2>Create Survey</h2>
+      <!-- Form to create a new survey -->
+    </section>
+
+    <!-- Survey response page (visible to users) -->
+    <section id="respond-survey">
+      <h2>Respond to Survey</h2>
+      <!-- Survey questions will be displayed here dynamically -->
+    </section>
+
+    <!-- Admin dashboard page (visible to admin) -->
+    <section id="admin-dashboard">
+      <h2>Admin Dashboard</h2>
+      <!-- Admin functionalities and survey management -->
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Survey Management System</p>
+  </footer>
+
+  <!-- JavaScript code to interact with Firebase and manage UI -->
+  <script src="js/firebase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
